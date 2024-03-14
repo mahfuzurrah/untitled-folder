@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="logIn_page">
+        <div class="login_nav">
+            <img src="../components/assets/svg/modifii_black.svg" alt="" />
+        </div>
+        <div class="container">
+            <div class="login_form">
+                <div class="login_img mb-5">
+                    <img src="../components/assets/svg/login-logo.svg" alt="" />
+                </div>
+                <div class="tab-container">
+                    <div class="tab-buttons">
+                        <button class="active" onclick="handleTabClick('pin')" data-tab="pin">PIN</button>
+                        <button onclick="handleTabClick('user')" data-tab="user">User ID</button>
+                    </div>
+                    <div class="tab-content">
+                        <div class="form_area login_tab active_tab" data-tab="pin">
+                            <h5 class="mb-3">Type your PIN</h5>
+                            <div class="otp-container mt-5">
+                                <input type="text" maxlength="1" onkeyup="handleInput(this, input2)" onkeydown="handleBackspace(this, input1)">
+                                <input type="text" id="input2" maxlength="1" onkeyup="handleInput(this, input3)" onkeydown="handleBackspace(this, input1)">
+                                <input type="text" id="input3" maxlength="1" onkeyup="handleInput(this, input4)" onkeydown="handleBackspace(this, input2)">
+                                <input type="text" id="input4" maxlength="1" onkeyup="handleInput(this, input5)" onkeydown="handleBackspace(this, input3)">
+                                <input type="text" id="input5" maxlength="1" onkeydown="handleBackspace(this, input4)">
+                              </div>
+                        </div>
+                        <div class="form_area login_tab" data-tab="user">
+                            <h5>Type your Email and Password</h5>
+                            <form action="" class="input_form">
+                                <input class="form-control" type="email" value="" placeholder="Username or email" onchange="handleNameChange(event)" />
+                                <input class="form-control" type="password" value="" placeholder="Password" onchange="handlePassChange(event)" />
+                                <div class="forget_area">
+                                    <span class="remember_me">
+                                        <input type="checkbox" class="redio_input" />
+                                        <p>Remember me</p>
+                                    </span>
+                                </div>
+                                <a href="/dashboard"><button class="btn">Sign In</button></a>
+                            </form>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </div>
+
+    <script src="style.js"></script>
+</body>
+
+</html>
